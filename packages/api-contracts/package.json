@@ -1,0 +1,13 @@
+{
+  "name": "@shanjinzi/api-contracts",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  }
+}

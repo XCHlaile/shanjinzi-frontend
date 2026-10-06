@@ -1,0 +1,34 @@
+{
+  "name": "shanjinzi-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm run dev:web",
+    "dev:web": "pnpm --filter shanjinzi-web dev",
+    "dev:admin": "pnpm --filter shanjinzi-admin-web dev",
+    "generate:api": "node scripts/generate-api-contracts.mjs",
+    "check:api": "node scripts/generate-api-contracts.mjs --check",
+    "check:types": "tsc -p packages/api-contracts/tsconfig.json",
+    "check:architecture": "node scripts/check-architecture.mjs",
+    "test": "pnpm run check:api && pnpm run check:architecture && node --test packages/api-contracts/src/*.test.js apps/web/src/app/api/*.test.js apps/web/src/app/router/*.test.js apps/web/src/entities/*/model/*.test.js apps/web/src/features/*/api/*.test.js apps/web/src/features/*/model/*.test.js apps/web/src/features/*/lib/*.test.js apps/web/src/shared/api/*.test.js apps/web/src/shared/composables/*.test.js apps/web/src/shared/lib/*.test.js apps/admin-web/src/api/*.test.js apps/admin-web/src/entities/student/lib/*.test.js apps/admin-web/src/features/*/api/*.test.js apps/admin-web/src/features/*/model/*.test.js apps/admin-web/src/features/*/lib/*.test.js apps/admin-web/src/shared/lib/*.test.js",
+    "test:e2e": "playwright test",
+    "lint": "eslint . --max-warnings=0",
+    "check": "pnpm test && pnpm run check:types && pnpm lint && pnpm build",
+    "build": "pnpm run build:web && pnpm run build:admin",
+    "build:web": "pnpm --filter shanjinzi-web build",
+    "build:admin": "pnpm --filter shanjinzi-admin-web build",
+    "preview:web": "pnpm --filter shanjinzi-web preview",
+    "preview:admin": "pnpm --filter shanjinzi-admin-web preview"
+  },
+  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "1.62.1",
+    "eslint": "^10.8.0",
+    "eslint-plugin-vue": "^10.10.0",
+    "globals": "^17.8.0",
+    "typescript": "7.0.2",
+    "unplugin-vue-components": "^32.1.0"
+  }
+}

@@ -1,0 +1,6 @@
+export * from './payloads/classPayloads.js'
+export * from './payloads/competitionPayloads.js'
+export * from './payloads/newsPayloads.js'
+export * from './payloads/schoolPayloads.js'
+export * from './payloads/studentPayloads.js'
+export * from './payloads/userPayloads.js'

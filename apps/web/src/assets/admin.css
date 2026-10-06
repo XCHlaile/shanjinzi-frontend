@@ -1,0 +1,76 @@
+.admin-shell button,
+.admin-shell input,
+.admin-shell textarea {
+  font: inherit;
+}
+
+.admin-shell .page-title {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.admin-shell .toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-shell .filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-shell .panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.admin-shell .metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.admin-shell .metric {
+  min-height: 88px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.admin-shell .metric span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-shell .metric strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.admin-shell .chart {
+  width: 100%;
+  height: 320px;
+}
+
+@media (max-width: 900px) {
+  .admin-shell .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-shell .metric-grid {
+    grid-template-columns: 1fr;
+  }
+}

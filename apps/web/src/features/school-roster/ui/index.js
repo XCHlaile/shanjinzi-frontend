@@ -1,0 +1,6 @@
+export { default as SchoolRosterRecordDialog } from './SchoolRosterRecordDialog.vue'
+export { default as SchoolRosterTable } from './SchoolRosterTable.vue'
+export { default as SchoolRosterToolbar } from './SchoolRosterToolbar.vue'
+export { default as StudentGuardianDialogs } from './StudentGuardianDialogs.vue'
+export { default as StudentImportDialog } from './StudentImportDialog.vue'
+export { default as StudentProfileDialog } from './StudentProfileDialog.vue'
